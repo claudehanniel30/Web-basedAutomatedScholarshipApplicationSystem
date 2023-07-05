@@ -8,6 +8,19 @@ import { FolderPageRoutingModule } from './folder-routing.module';
 
 import { FolderPage } from './folder.page';
 
+import { ProfileComponent } from '../profile/profile.component';
+
+import { StatusComponent } from '../status/status.component';
+
+import { RequirementsComponent } from '../requirements/requirements.component';
+
+import { SubmitComponent } from '../submit/submit.component';
+
+import { NotificationsComponent } from '../notifications/notifications.component';
+
+import { MessagesComponent } from '../messages/messages.component';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +28,6 @@ import { FolderPage } from './folder.page';
     IonicModule,
     FolderPageRoutingModule
   ],
-  declarations: [FolderPage]
+  declarations: [FolderPage, ProfileComponent, StatusComponent, RequirementsComponent, SubmitComponent, NotificationsComponent, MessagesComponent]
 })
 export class FolderPageModule {}

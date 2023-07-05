@@ -15,7 +15,31 @@
   </ion-header>
 
   <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ng-container *ngIf="folder === 'Profile'">
+      <app-profile></app-profile>
+    </ng-container>
+
+    <ng-container *ngIf="folder === 'Scholarship Status'">
+      <app-status></app-status>
+    </ng-container>
+    
+    <ng-container *ngIf="folder === 'Scholarship Requirements'">
+      <app-requirements></app-requirements>
+    </ng-container>
+
+    <ng-container *ngIf="folder === 'Submit Requirements'">
+      <app-submit></app-submit>
+    </ng-container>
+
+    <ng-container *ngIf="folder === 'Notifications'">
+      <app-notifications></app-notifications>
+    </ng-container>
+
+    <ng-container *ngIf="folder === 'Messages'">
+      <app-messages></app-messages>
+    </ng-container>
+
+    </div>
 </ion-content>
+
+
