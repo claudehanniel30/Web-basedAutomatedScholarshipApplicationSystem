@@ -1,0 +1,44 @@
+.container{
+    height: 80vh;
+    width: 120vh;
+    padding: 5vh;
+    margin: 10vh;
+    border: 10px;
+    background-color: rgb(180, 238, 186);   
+    margin-top: 23vh;
+}
+
+.component{
+    height: 6vh;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr;
+    margin-top: 6vh;
+    margin-left: 9vh;
+    width: 90vh;
+}
+
+.cancelbtn {
+    position: absolute;
+    left: 0;
+    margin-left: 50vh;
+}
+
+.submitbtn {
+    position: absolute;
+    right: 0;
+    margin-right: 60vh;
+}
+
+form {
+    position: absolute;
+    left: 0;
+    margin-left: 50vh;
+    padding-top: 1.3vh;
+}
+
+.grade {
+    position: absolute;
+    left: 0;
+    margin-left: 25vh;
+}
