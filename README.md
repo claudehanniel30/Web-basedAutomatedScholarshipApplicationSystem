@@ -11,6 +11,7 @@ This project aims to develop an automated scholarship eligibility checker that e
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
+- [Developers](#developers)
 
 
 ## Project Description
@@ -73,3 +74,8 @@ We welcome contributions to improve the automated scholarship eligibility checke
 4. Submit a pull request with a clear description of your changes and their purpose.
 
 For more details on contributing, please refer to our [Contributing Guidelines](CONTRIBUTING.md).
+
+##Developers
+Claude Hanniel V. Tarrayo
+Al Vincent Guilan
+Maria Nimuel Bendana
