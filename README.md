@@ -76,6 +76,9 @@ We welcome contributions to improve the automated scholarship eligibility checke
 For more details on contributing, please refer to our [Contributing Guidelines](CONTRIBUTING.md).
 
 ## Developers
+
 Claude Hanniel V. Tarrayo
+
 Al Vincent Guilan
+
 Maria Nimuel Bendana
