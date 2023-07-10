@@ -15,6 +15,10 @@
   </ion-header>
 
   <div id="container">
+    <ng-container *ngIf="folder === 'Home'">
+      <app-home></app-home>
+    </ng-container>
+
     <ng-container *ngIf="folder === 'Profile'">
       <app-profile></app-profile>
     </ng-container>

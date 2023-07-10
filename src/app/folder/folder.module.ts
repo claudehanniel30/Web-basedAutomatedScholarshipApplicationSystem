@@ -20,6 +20,7 @@ import { NotificationsComponent } from '../notifications/notifications.component
 
 import { MessagesComponent } from '../messages/messages.component';
 
+import { HomeComponent } from '../home/home.component';
 
 @NgModule({
   imports: [
@@ -28,6 +29,6 @@ import { MessagesComponent } from '../messages/messages.component';
     IonicModule,
     FolderPageRoutingModule
   ],
-  declarations: [FolderPage, ProfileComponent, StatusComponent, RequirementsComponent, SubmitComponent, NotificationsComponent, MessagesComponent]
+  declarations: [FolderPage, HomeComponent, ProfileComponent, StatusComponent, RequirementsComponent, SubmitComponent, NotificationsComponent, MessagesComponent]
 })
 export class FolderPageModule {}

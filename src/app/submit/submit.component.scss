@@ -1,44 +1,73 @@
-.container{
-    height: 80vh;
-    width: 120vh;
-    padding: 5vh;
-    margin: 10vh;
-    border: 10px;
-    background-color: rgb(180, 238, 186);   
-    margin-top: 23vh;
+.container-1 {
+  width: 900px;
+  padding: 1px;
+  padding-bottom: 10px;
+  margin: 0 100px;
+  border: 10px;
+  background-color: rgb(180, 238, 186);
+  margin-top: 500px;
 }
 
-.component{
-    height: 6vh;
-    background-color: white;
-    display: grid;
-    grid-template-rows: 1fr;
-    margin-top: 6vh;
-    margin-left: 9vh;
-    width: 90vh;
+.line {
+  border-bottom: solid;
 }
 
-.cancelbtn {
-    position: absolute;
-    left: 0;
-    margin-left: 50vh;
+.line-1 {
+  border-bottom: solid;
+  margin-top: 40px;
 }
 
-.submitbtn {
-    position: absolute;
-    right: 0;
-    margin-right: 60vh;
+.line-2 {
+  border-bottom: solid;
+  margin-top: 20px;
 }
 
-form {
-    position: absolute;
-    left: 0;
-    margin-left: 50vh;
-    padding-top: 1.3vh;
+.firstname {
+  display: flex;
+  left: 0;
+  padding: 2px;
+  margin-top: 20px;
+  margin-left: 30px;
+  border: solid 2px;
 }
 
-.grade {
-    position: absolute;
-    left: 0;
-    margin-left: 25vh;
+ion-col {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  left: 0;
+  margin-top: 10px;
+}
+
+ion-input {
+  background-color: #fff;
+  min-height: 30px !important;
+  text-align: start;
+}
+
+.container-2 {
+  width: 900px;
+  padding-top: 5px;
+  margin: 0 100px;
+  border: 10px;
+  background-color: rgb(180, 238, 186);
+  padding-bottom: 20px;
+}
+
+.lastrow ion-col .cancelbtn {
+  position: absolute;
+  right: 0;
+}
+
+.canbtn {
+  margin-top: 70px;
+}
+
+h6 {
+  margin-left: 120px;
 }

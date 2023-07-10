@@ -1,39 +1,191 @@
-<div class="container">
-  <div class="container-header">
-      <h1><strong>Submit Requirements</strong></h1>
-    <div class="component">
-      <p class="grade">Upload Grades:</p>
-      <form action="upload-file">
-        <input type="file" id="myFile" name="filename">
-        <input type="reset">
-      </form>
-    </div>
-
-    <div class="component">
-      <p class="grade">Upload COR:</p>
-      <form action="upload-file">
-        <input type="file" id="myFile" name="filename">
-        <input type="reset">
-      </form>
-    </div>
-
-    <div class="component">
-      <p class="grade">Upload School ID:</p>
-      <form action="upload-file">
-        <input type="file" id="myFile" name="filename">
-        <input type="reset">
-      </form>
-    </div>
-
-    <div class="component">
-      <p class="grade">Upload Indigency:</p>
-      <form action="upload-file">
-        <input type="file" id="myFile" name="filename">
-        <input type="reset">
-      </form>
-    </div>
-    <br><br>
-    <ion-button class="cancelbtn" color="danger">Cancel</ion-button>
-    <ion-button class="submitbtn" color="success">Submit</ion-button>
+<div class="container-1">
+  <div class="container-header-1">
+    <h1>Educational Assistance Application Form</h1>
+    <p>Fill up this form</p>
   </div>
+
+  <div class="line"></div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <label>Full Name</label>
+        <ion-input
+          type="text"
+          fill="solid"
+          labelPlacement="floating"
+        ></ion-input>
+        <small>First Name</small>
+      </ion-col>
+      <ion-col>
+        <ion-input
+          type="text"
+          fill="solid"
+          labelPlacement="floating">
+        </ion-input>
+        <small>Middle Name</small>
+
+      </ion-col>
+      <ion-col>
+        <ion-input
+          type="text"
+          fill="solid"
+          labelPlacement="floating"
+        ></ion-input>
+        <small>Last Name</small>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <label>Birth Date</label>
+        <input type="date" id="birthday" name="birthday">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <label>Place of Birth</label>
+        <ion-input
+          type="text"
+          fill="solid"
+          labelPlacement="floating"
+        ></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <label>Home Address</label>
+        <ion-input
+          type="text"
+          fill="solid"
+          labelPlacement="floating"
+        ></ion-input>
+        <small>Street Address</small>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-input type="text" fill="solid" labelPlacement="floating">
+        </ion-input>
+        <small>City</small>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-input
+          type="text"
+          fill="solid"
+          labelPlacement="floating"
+        ></ion-input>
+        <small>Portal/Zip Code</small>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <label>Phone Number</label>
+        <ion-input
+          placeholder="ex: 09123456789"
+          type="text"
+          fill="solid"
+        ></ion-input>
+      </ion-col>
+
+      <ion-col>
+        <label>Email</label>
+        <ion-input
+          placeholder="ex: myname@example.com"
+          type="email"
+          fill="solid"
+        ></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <label>Course</label>
+        <ion-input type="text" fill="solid"></ion-input>
+      </ion-col>
+
+      <ion-col>
+        <label>CGPA or GWA</label>
+        <ion-input
+          type="text"
+          fill="solid"
+          labelPlacement="floating"
+        ></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="line-1"></div>
 </div>
+
+<div class="container-2">
+  <div class="container-header-2">
+    <h1>Upload Needed Files</h1>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h6>Upload Grades: </h6>
+      </ion-col>
+      <ion-col size="12" size-sm="7">
+        <form action="upload-file">
+          <input type="file" id="myFile" name="filename" />
+          <input type="reset" />
+        </form>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h6>Upload COR: </h6>
+      </ion-col>
+      <ion-col size="12" size-sm="7">
+        <form action="upload-file">
+          <input type="file" id="myFile" name="filename" />
+          <input type="reset" />
+        </form>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h6>Upload School ID: </h6>
+      </ion-col>
+      <ion-col size="12" size-sm="7">
+        <form action="upload-file">
+          <input type="file" id="myFile" name="filename" />
+          <input type="reset" />
+        </form>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <h6>Upload Indengency: </h6>
+      </ion-col>
+      
+      <ion-col size="12" size-sm="7">
+        <form action="upload-file">
+          <input type="file" id="myFile" name="filename" />
+          <input type="reset" />
+        </form>
+      </ion-col>
+    </ion-row>
+    <ion-row class="lastrow">
+      <ion-col class="canbtn">
+      <ion-button (click)="toHome()" class="cancelbtn" color="danger">Cancel</ion-button>
+      </ion-col>
+      <ion-col class="subbtn">
+        <ion-button (click)="toStatus()" class="submitbtn" color="success">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="line-2"></div>
+</div>
+
