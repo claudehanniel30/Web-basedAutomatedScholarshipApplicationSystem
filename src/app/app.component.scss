@@ -2,10 +2,15 @@ ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }
 
+.mtlogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
 ion-menu.md ion-content {
   --padding-start: 8px;
   --padding-end: 8px;
-  --padding-top: 20px;
   --padding-bottom: 20px;
 }
 
@@ -80,7 +85,7 @@ ion-menu.ios ion-item.selected ion-icon {
 
 ion-menu.ios ion-item ion-icon {
   font-size: 24px;
-  color: #73849a;
+  color: #2ee10e;
 }
 
 ion-menu.ios ion-list-header,
@@ -96,7 +101,6 @@ ion-menu.ios ion-note {
 ion-note {
   display: inline-block;
   font-size: 16px;
-
   color: rgb(52, 247, 84);
 }
 

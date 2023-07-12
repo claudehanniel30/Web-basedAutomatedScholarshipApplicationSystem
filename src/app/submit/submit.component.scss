@@ -1,25 +1,8 @@
 .container-1 {
-  width: 900px;
-  padding: 1px;
-  padding-bottom: 10px;
-  margin: 0 100px;
   border: 10px;
-  background-color: rgb(180, 238, 186);
-  margin-top: 500px;
-}
-
-.line {
-  border-bottom: solid;
-}
-
-.line-1 {
-  border-bottom: solid;
-  margin-top: 40px;
-}
-
-.line-2 {
-  border-bottom: solid;
-  margin-top: 20px;
+  background-color: transparent;
+  margin-top: 520px;
+  padding-top: 50px;
 }
 
 .firstname {
@@ -50,15 +33,6 @@ ion-input {
   text-align: start;
 }
 
-.container-2 {
-  width: 900px;
-  padding-top: 5px;
-  margin: 0 100px;
-  border: 10px;
-  background-color: rgb(180, 238, 186);
-  padding-bottom: 20px;
-}
-
 .lastrow ion-col .cancelbtn {
   position: absolute;
   right: 0;
@@ -70,4 +44,14 @@ ion-input {
 
 h6 {
   margin-left: 120px;
+}
+
+.line {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 2px solid black;
+}
+
+.container-2 {
+  margin-bottom: 50px;
 }

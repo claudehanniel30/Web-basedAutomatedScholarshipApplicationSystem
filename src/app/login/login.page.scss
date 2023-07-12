@@ -1,0 +1,28 @@
+.login-container {
+    display: flex;
+}
+
+.left-div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-div {
+    padding-top: 60px;
+    flex: 1;
+    display: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-1 {
+    background-color: #85ef67dc;
+    position: absolute;
+    top: 75px;
+    left: 370px;
+    height: 600px;
+    width: 900px;
+    border-radius: 50px;
+}
