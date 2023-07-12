@@ -1,57 +1,268 @@
+/* Styling for the form container */
 .container-1 {
-  border: 10px;
-  background-color: transparent;
-  margin-top: 520px;
-  padding-top: 50px;
+  background-color: #f2f9f5;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 900px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.firstname {
+.container-1 input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #1f6f49;
+  background-color: #edf7f0;
+  transition: background-color 0.3s ease;
+  
+  /* Add calendar icon */
+  background-image: url("/calendar-icon.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 20px;
+  padding-right: 30px; /* Adjust padding to make room for the icon */
+}
+
+.container-1 input[type="date"]:focus {
+  background-color: #c8e4d4;
+  outline: none;
+}
+
+/* Styling for the form header */
+.container-header-1 h1 {
+  color: #1f6f49;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.container-header-1 p {
+  color: #6c9974;
+  font-size: 14px;
+  margin-top: 0;
+}
+
+/* Styling for the form fields */
+.container-1 ion-row {
   display: flex;
-  left: 0;
-  padding: 2px;
-  margin-top: 20px;
-  margin-left: 30px;
-  border: solid 2px;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-ion-col {
-  display: flex;
-  align-items: start;
-  justify-content: end;
-  flex-direction: column;
+.container-1 ion-col {
+  flex: 1;
+  margin-right: 10px;
 }
 
-label {
-  display: flex;
-  left: 0;
-  margin-top: 10px;
+.container-1 ion-col:last-child {
+  margin-right: 0;
 }
 
-ion-input {
-  background-color: #fff;
-  min-height: 30px !important;
-  text-align: start;
+.container-1 ion-input,
+.container-1 input[type="date"],
+.container-1 input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #1f6f49;
+  background-color: #edf7f0;
+  transition: background-color 0.3s ease;
 }
 
-.lastrow ion-col .cancelbtn {
-  position: absolute;
-  right: 0;
+.container-1 ion-input:focus,
+.container-1 input[type="date"]:focus,
+.container-1 input[type="file"]:focus {
+  background-color: #c8e4d4;
+  outline: none;
 }
 
-.canbtn {
-  margin-top: 70px;
+.container-1 label {
+  font-weight: bold;
+  color: #1f6f49;
+  margin-bottom: 5px;
 }
 
-h6 {
-  margin-left: 120px;
+.container-1 small {
+  color: #6c9974;
+  display: block;
+  margin-top: 5px;
 }
 
-.line {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  border: 2px solid black;
-}
-
+/* Styling for the upload file section */
 .container-2 {
-  margin-bottom: 50px;
+  background-color: #f2f9f5;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.container-header-2 h1 {
+  color: #1f6f49;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.container-2 h6 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #6c9974;
+}
+
+.container-2 input[type="file"] {
+  margin-bottom: 10px;
+}
+
+/* Styling for the submit and cancel buttons */
+.lastrow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.canbtn,
+.subbtn {
+  padding: 0 20px;
+}
+
+.cancelbtn,
+.submitbtn {
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.cancelbtn {
+  background-color: #ff5f5f;
+  margin-right: 10px;
+}
+
+.submitbtn {
+  background-color: #38c172;
+}
+
+/* Styling for the horizontal lines */
+.line,
+.line-1,
+.line-2 {
+  height: 1px;
+  background-color: #b1d8c5;
+  margin: 20px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+  .container-1 ion-input,
+  .container-2 ion-input {
+    width: 100%;
+  }
+
+  .lastrow {
+    flex-direction: column;
+  }
+
+  .canbtn,
+  .subbtn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* Additional styling */
+
+/* Styling for form labels */
+.container-1 .custom-label {
+  font-weight: bold;
+  color: #1f6f49;
+  margin-bottom: 5px;
+}
+
+/* Styling for form checkboxes */
+.container-1 .custom-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.container-1 .custom-checkbox label {
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.container-1 .custom-checkbox input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Styling for form select inputs */
+.container-1 select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #1f6f49;
+  background-color: #edf7f0;
+  transition: background-color 0.3s ease;
+}
+
+.container-1 select:focus {
+  background-color: #c8e4d4;
+  outline: none;
+}
+
+.container-2 .choose-file-btn {
+  color: #2cc226;
+  font-weight: bold;
+  padding: 8px 16px;
+  background-color: #38c172;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.container-2 .reset-btn{
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 14px;
+  background-color: #ff5f5f;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.container-2 .reset-btn:hover{
+background-color: #e91818;
+}
+
+/* Styling for the file input and button */
+.container-2 .file-input {
+  display: none;
+}
+
+.container-2 .file-button {
+  display: inline-block;
+  padding: 8px 14px;
+  background-color: #38c172;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Additional styling for the file input and button */
+.container-2 .file-button:hover {
+  background-color: #1f6f49;
+}
+
+.container-2 .file-button:active {
+  background-color: #15513a;
+}
+
