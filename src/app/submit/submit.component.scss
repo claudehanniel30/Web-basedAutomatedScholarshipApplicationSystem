@@ -4,7 +4,7 @@
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-  margin-top: 900px;
+  margin-top: 850px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -123,13 +123,11 @@
   margin-top: 20px;
 }
 
-.canbtn,
-.subbtn {
+.canbtn, .subbtn {
   padding: 0 20px;
 }
 
-.cancelbtn,
-.submitbtn {
+.cancelbtn, .submitbtn {
   color: #fff;
   font-weight: bold;
   padding: 12px 24px;
@@ -137,15 +135,18 @@
   border-radius: 30px;
   cursor: pointer;
   text-transform: uppercase;
+  margin-left: 0px;
 }
 
 .cancelbtn {
   background-color: #ff5f5f;
   margin-right: 10px;
+  margin-left: 275px;
 }
 
 .submitbtn {
   background-color: #38c172;
+  margin-right: 400px;
 }
 
 /* Styling for the horizontal lines */

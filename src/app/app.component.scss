@@ -1,17 +1,20 @@
 ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }
-
+// Adjust the logo
 .mtlogo {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 40px;
+  height: auto;
+  width: 250px;
 }
 ion-menu.md ion-content {
   --padding-start: 8px;
   --padding-end: 8px;
   --padding-bottom: 20px;
+
 }
 
 ion-menu.md ion-list {
@@ -35,7 +38,6 @@ ion-menu.md ion-list#inbox-list ion-list-header {
   font-size: 22px;
   font-weight: 600;
   padding-bottom: 20px;
-  min-height: 20px;
 }
 
 ion-menu.md ion-item {
@@ -45,15 +47,15 @@ ion-menu.md ion-item {
 }
 
 ion-menu.md ion-item.selected {
-  --background: rgba(var(--ion-color-primary-rgb), 0.10);
+  --background: rgba(var(--ion-color-primary-rgb), 0.1);
 }
 
 ion-menu.md ion-item.selected ion-icon {
-  color: green;
+  color: #AC3E3E;
 }
 
 ion-menu.md ion-item ion-icon {
-  color: #56b723;
+  color: #18884A;
 }
 
 ion-menu.md ion-item ion-label {
@@ -66,6 +68,7 @@ ion-menu.ios ion-content {
 
 ion-menu.ios ion-list {
   padding: 20px 0 0 0;
+  
 }
 
 ion-menu.ios ion-note {
@@ -105,6 +108,5 @@ ion-note {
 }
 
 ion-item.selected {
-  --color: rgb(23, 166, 33);
+  --color: #AC3E3E;
 }
-
