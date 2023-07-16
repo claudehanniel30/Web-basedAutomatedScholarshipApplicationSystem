@@ -9,29 +9,37 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <label class="custom-label"></label><br>
+        <label class="custom-label"></label><br />
         <ion-input
           type="text"
           fill="solid"
           labelPlacement="floating"
+          name="firstname"
+          [(ngModel)]="firstname"
+          required
         ></ion-input>
         <small>First Name *</small>
       </ion-col>
       <ion-col>
-        <label class="custom-label">Full Name *</label><br>
+        <label class="custom-label">Full Name *</label><br />
         <ion-input
           type="text"
           fill="solid"
           labelPlacement="floating"
+          name="middlename"
+          [(ngModel)]="middlename"
         ></ion-input>
-        <small>Middle Name *</small>
+        <small>Middle Name</small>
       </ion-col>
       <ion-col>
-        <label class="custom-label"></label><br>
+        <label class="custom-label"></label><br />
         <ion-input
           type="text"
           fill="solid"
           labelPlacement="floating"
+          name="lastname"
+          [(ngModel)]="lastname"
+          required
         ></ion-input>
         <small>Last Name *</small>
       </ion-col>
@@ -40,7 +48,13 @@
     <ion-row>
       <ion-col>
         <label class="custom-label">Birth Date *</label>
-        <input type="date" id="birthday" name="birthday">
+        <input
+          type="date"
+          id="birthday"
+          name="birthdate"
+          [(ngModel)]="birthdate"
+          required
+        />
       </ion-col>
     </ion-row>
 
@@ -51,6 +65,9 @@
           type="text"
           fill="solid"
           labelPlacement="floating"
+          name="placeofbirth"
+          [(ngModel)]="placeofbirth"
+          required
         ></ion-input>
       </ion-col>
     </ion-row>
@@ -62,6 +79,9 @@
           type="text"
           fill="solid"
           labelPlacement="floating"
+          name="streetaddress"
+          [(ngModel)]="streetaddress"
+          required
         ></ion-input>
         <small>Street Address</small>
       </ion-col>
@@ -69,7 +89,14 @@
 
     <ion-row>
       <ion-col>
-        <ion-input type="text" fill="solid" labelPlacement="floating"></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          labelPlacement="floating"
+          name="city"
+          [(ngModel)]="city"
+          required
+        ></ion-input>
         <small>City *</small>
       </ion-col>
     </ion-row>
@@ -80,6 +107,9 @@
           type="text"
           fill="solid"
           labelPlacement="floating"
+          name="portalzipcode"
+          [(ngModel)]="portalzipcode"
+          required
         ></ion-input>
         <small>Portal/Zip Code *</small>
       </ion-col>
@@ -92,6 +122,9 @@
           placeholder="ex: 09123456789"
           type="text"
           fill="solid"
+          name="phonenumber"
+          [(ngModel)]="phonenumber"
+          required
         ></ion-input>
       </ion-col>
 
@@ -101,6 +134,23 @@
           placeholder="ex: myname@example.com"
           type="email"
           fill="solid"
+          name="email"
+          [(ngModel)]="email"
+          required
+        ></ion-input>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <label class="custom-label">Current School *</label>
+        <ion-input
+          type="text"
+          fill="solid"
+          labelPlacement="floating"
+          name="placeofbirth"
+          [(ngModel)]="placeofbirth"
+          required
         ></ion-input>
       </ion-col>
     </ion-row>
@@ -108,15 +158,24 @@
     <ion-row>
       <ion-col>
         <label class="custom-label">Course *</label>
-        <ion-input type="text" fill="solid"></ion-input>
+        <ion-input
+          type="text"
+          fill="solid"
+          name="course"
+          [(ngModel)]="course"
+          required
+        ></ion-input>
       </ion-col>
 
       <ion-col>
         <label class="custom-label">CGPA or GWA *</label>
         <ion-input
-          type="text"
+          type="number"
           fill="solid"
           labelPlacement="floating"
+          name="gwa"
+          [(ngModel)]="gwa"
+          required
         ></ion-input>
       </ion-col>
     </ion-row>
@@ -127,67 +186,97 @@
 <div class="container-2">
   <div class="container-header-2">
     <h1>Upload Needed Files</h1>
+    <small>*Submit all the rquirements needed below</small>
   </div>
 
   <ion-grid>
     <ion-row>
       <ion-col>
-        <h6>Upload Grades: </h6>
+        <h6>Upload Grades:</h6>
       </ion-col>
       <ion-col size="12" size-sm="7">
-        <form action="upload-file">
-          <label for="grades-file" class="file-button">Select File</label>
-          <input type="file" id="grades-file" name="filename" class="file-input" />
-          <input type="reset" class="reset-btn" />
-        </form>
+        <label for="grades-file" class="file-button">Select File</label>
+        <!-- <input type="text" (change)="getGrade(grade.value)" #grade /> <br /> -->
+        <input
+          type="file"
+          id="grades-file"
+          name="gradesFile"
+          class="file-input"
+          (change)="getGradeFile($event)"
+        />
+        <input type="reset" class="reset-btn" value="Delete" />
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
-        <h6>Upload COR: </h6>
+        <h6>Upload COR:</h6>
       </ion-col>
       <ion-col size="12" size-sm="7">
-        <form action="upload-file">
-          <label for="cor-file" class="file-button">Select File</label>
-          <input type="file" id="cor-file" name="filename" class="file-input" />
-          <input type="reset" class="reset-btn" />
-        </form>
+        <label for="cor-file" class="file-button">Select File</label>
+        <!-- <input type="text" (change)="getCOR(cor.value)" #cor /> <br /> -->
+        <input
+          type="file"
+          id="cor-file"
+          name="corFile"
+          class="file-input"
+          (change)="getCORFile($event)"
+        />
+        <input type="reset" class="reset-btn" value="Delete" />
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
-        <h6>Upload School ID: </h6>
+        <h6>Upload School ID:</h6>
       </ion-col>
       <ion-col size="12" size-sm="7">
-        <form action="upload-file">
-          <label for="school-id-file" class="file-button">Select File</label>
-          <input type="file" id="school-id-file" name="filename" class="file-input" />
-          <input type="reset" class="reset-btn" />
-        </form>
+        <label for="school-id-file" class="file-button">Select File</label>
+        <!-- <input type="text" (change)="getID(id.value)" #id /> <br /> -->
+        <input
+          type="file"
+          id="school-id-file"
+          name="schoolIdFile"
+          class="file-input"
+          (change)="getIDFile($event)"
+        />
+        <input type="reset" class="reset-btn" value="Delete" />
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
-        <h6>Upload Indengency: </h6>
+        <h6>Upload Indengency:</h6>
       </ion-col>
       <ion-col size="12" size-sm="7">
-        <form action="upload-file">
-          <label for="indengency-file" class="file-button">Select File</label>
-          <input type="file" id="indengency-file" name="filename" class="file-input" />
-          <input type="reset" class="reset-btn" />
-        </form>
+        <label for="indengency-file" class="file-button">Select File</label>
+        <!-- <input
+          type="text"
+          (change)="getIndigency(indigency.value)"
+          #indigency
+        /> -->
+        <br />
+        <input
+          type="file"
+          id="indengency-file"
+          name="indengencyFile"
+          class="file-input"
+          (change)="getIndigencyFile($event)"
+        />
+        <input type="reset" class="reset-btn" value="Delete" />
       </ion-col>
     </ion-row>
 
     <ion-row class="lastrow">
       <ion-col class="canbtn">
-        <ion-button (click)="toHome()" class="cancelbtn" color="danger">Cancel</ion-button>
+        <ion-button (click)="toHome()" class="cancelbtn" color="danger"
+          >Cancel</ion-button
+        >
       </ion-col>
       <ion-col class="subbtn">
-        <ion-button (click)="toStatus()" class="submitbtn" color="success">Submit</ion-button>
+        <ion-button (click)="toStatus()" class="submitbtn" color="success"
+          >Submit</ion-button
+        >
       </ion-col>
     </ion-row>
   </ion-grid>

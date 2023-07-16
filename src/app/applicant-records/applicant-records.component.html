@@ -1,0 +1,37 @@
+<div class="container-3">
+  <div class="container-header-3">
+    <h1>Applicant Records</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Birth Date</th>
+          <th>Birth Place</th>
+          <th>Street Address</th>
+          <th>City</th>
+          <th>Portal/Zip Code</th>
+          <th>Phone Number</th>
+          <th>Email</th>
+          <th>GWA</th>
+          <th colspan="3">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of applicants">
+          <td>{{ student.firstname }} {{ student.lastname }}</td>
+          <td>{{ student.birthdate }}</td>
+          <td>{{ student.placeofbirth }}</td>
+          <td>{{ student.streetaddress }}</td>
+          <td>{{ student.city }}</td>
+          <td>{{ student.portalzipcode }}</td>
+          <td>{{ student.phonenumber }}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ student.gwa }}</td>
+          <td><ion-button>ASSESS</ion-button></td>
+          <td><ion-button color="danger">REJECT</ion-button></td>
+          <td><ion-button color="success">APPROVE</ion-button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

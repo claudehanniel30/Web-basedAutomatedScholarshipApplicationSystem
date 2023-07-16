@@ -1,5 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-folder',
@@ -9,9 +10,16 @@ import { ActivatedRoute } from '@angular/router';
 export class FolderPage implements OnInit {
   public folder!: string;
   private activatedRoute = inject(ActivatedRoute);
-  constructor() {}
+  constructor(private menu: MenuController, private router: Router) {}
 
   ngOnInit() {
+    this.menu.enable(true);
+    if (
+      localStorage.getItem('studentID') == null &&
+      localStorage.getItem('adminID') == null
+    ) {
+      this.router.navigate(['/login']);
+    }
     this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
   }
 }

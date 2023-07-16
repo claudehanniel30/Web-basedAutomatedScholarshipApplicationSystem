@@ -19,16 +19,29 @@ import { SubmitComponent } from '../submit/submit.component';
 import { NotificationsComponent } from '../notifications/notifications.component';
 
 import { MessagesComponent } from '../messages/messages.component';
-
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from '../home/home.component';
-
+import { ApplicantRecordsComponent } from '../applicant-records/applicant-records.component';
+import { ApplicationListComponent } from '../application-list/application-list.component';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FolderPageRoutingModule
+    FolderPageRoutingModule,
+    HttpClientModule,
   ],
-  declarations: [FolderPage, HomeComponent, ProfileComponent, StatusComponent, RequirementsComponent, SubmitComponent, NotificationsComponent, MessagesComponent]
+  declarations: [
+    FolderPage,
+    HomeComponent,
+    ProfileComponent,
+    StatusComponent,
+    RequirementsComponent,
+    SubmitComponent,
+    NotificationsComponent,
+    MessagesComponent,
+    ApplicantRecordsComponent,
+    ApplicationListComponent,
+  ],
 })
 export class FolderPageModule {}

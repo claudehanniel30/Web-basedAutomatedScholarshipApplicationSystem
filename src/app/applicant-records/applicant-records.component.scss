@@ -1,0 +1,42 @@
+.container-3 {
+  height: 90vh;
+  padding: 10px;
+  width: 100%;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f5f5f5;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+ion-button {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --border-radius: 5px;
+  --background: #4285f4;
+  --color: #fff;
+  --ion-color-primary: #fff;
+}
+
+ion-button[color="danger"] {
+  --background: #ff5722;
+}
+
+ion-button[color="success"] {
+  --background: #2ecc71;
+}
