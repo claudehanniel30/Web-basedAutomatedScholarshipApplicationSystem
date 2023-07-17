@@ -10,6 +10,7 @@ import { DataserviceService } from '../dataservice.service';
 export class LoginPage implements OnInit {
   emailaddress: string = '';
   password: string = '';
+role: any;
 
   constructor(
     private menu: MenuController,

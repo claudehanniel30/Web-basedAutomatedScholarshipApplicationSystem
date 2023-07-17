@@ -1,46 +1,32 @@
 <div class="content-1">
   <div class="login-container">
     <div class="left-div">
-      <h1>LOGO</h1>
+      <img src="/assets/mtlogo.jpg" alt="Logo" class="logo-image">
     </div>
     <div class="right-div">
-      <ion-grid>
-        <ion-row>
-          <h1>Sign into your Account</h1>
-        </ion-row>
+      <h1>Sign into your Account</h1>
+      <div class="form-container">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" [(ngModel)]="emailaddress">
 
-        <ion-row>
-          <label>Email Address</label>
-          <ion-input
-            type="email"
-            placeholder="email@domain.com"
-            [(ngModel)]="emailaddress"
-          >
-          </ion-input>
-        </ion-row>
+        <label for="password">Password</label>
+        <input type="password" id="password" [(ngModel)]="password">
 
-        <ion-row>
-          <label>Password</label>
-          <ion-input
-            type="password"
-            placeholder="Password"
-            [(ngModel)]="password"
-          >
-          </ion-input>
-        </ion-row>
+        <label for="role">Sign in as:</label>
+        <select id="role" [(ngModel)]="role">
+          <option value="user">User</option>
+          <option value="admin">Admin</option>
+        </select>
 
-        <ion-row>
-          <ion-button (click)="submitLogin()">Sign in</ion-button>
-        </ion-row>
+        <div class="button-container">
+        <button class="cancel-button">Cancel&nbsp;</button>
+        <button (click)="submitLogin()">Sign in</button>
+        </div>
 
-        <ion-row>
-          <label>Don't you have an Account? <a href="#">Sign Up</a></label>
-        </ion-row>
+        <p>Don't have an account? <a href="#">Sign Up</a></p>
 
-        <ion-row>
-          <a href="#">Forgot Password?</a>
-        </ion-row>
-      </ion-grid>
+        <p><a href="#">Forgot Password?</a></p>
+      </div>
     </div>
   </div>
 </div>

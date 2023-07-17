@@ -1,46 +1,46 @@
 /* Styling for the form container */
 .container-1 {
-  background-color: #f2f9f5;
+  background-color: #325a22;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-  margin-top: 850px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 1020px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.container-1 input[type="date"] {
+.container-1 input[type="date"],
+.container-1 ion-input,
+.container-1 input[type="file"] {
   width: 100%;
   padding: 10px;
   border: none;
   border-radius: 5px;
-  color: #1f6f49;
-  background-color: #edf7f0;
+  color: #39ff14;
+  background-color: #ffffff;
   transition: background-color 0.3s ease;
-  
-  /* Add calendar icon */
-  background-image: url("/calendar-icon.png");
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 20px;
-  padding-right: 30px; /* Adjust padding to make room for the icon */
+  font-family: Arial, sans-serif;
 }
 
-.container-1 input[type="date"]:focus {
-  background-color: #c8e4d4;
+.container-1 ion-input:focus,
+.container-1 input[type="date"]:focus,
+.container-1 input[type="file"]:focus {
+  background-color: #ffffff;
   outline: none;
 }
 
 /* Styling for the form header */
 .container-header-1 h1 {
-  color: #1f6f49;
-  font-size: 24px;
+  color: #39ff14;
+  font-size: 28px;
   margin-bottom: 10px;
+  font-family: "Bebas Neue", cursive;
 }
 
 .container-header-1 p {
-  color: #6c9974;
-  font-size: 14px;
+  color: #005007;
+  font-size: 16px;
   margin-top: 0;
+  font-family: Arial, sans-serif;
 }
 
 /* Styling for the form fields */
@@ -59,56 +59,46 @@
   margin-right: 0;
 }
 
-.container-1 ion-input,
-.container-1 input[type="date"],
-.container-1 input[type="file"] {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  color: #1f6f49;
-  background-color: #edf7f0;
-  transition: background-color 0.3s ease;
-}
-
-.container-1 ion-input:focus,
-.container-1 input[type="date"]:focus,
-.container-1 input[type="file"]:focus {
-  background-color: #c8e4d4;
-  outline: none;
-}
-
 .container-1 label {
   font-weight: bold;
-  color: #1f6f49;
+  color: #39ff14;
   margin-bottom: 5px;
+  font-family: Arial, sans-serif;
 }
 
 .container-1 small {
-  color: #6c9974;
+  color: #00d4ff;
   display: block;
   margin-top: 5px;
+  font-family: Arial, sans-serif;
 }
 
 /* Styling for the upload file section */
 .container-2 {
-  background-color: #f2f9f5;
+  background-color: #325a22;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .container-header-2 h1 {
-  color: #1f6f49;
-  font-size: 24px;
+  color: #39ff14;
+  font-size: 28px;
   margin-bottom: 10px;
+  font-family: "Bebas Neue", cursive;
+}
+
+.container-2 .small {
+  color: #fff;
+  font-family: Arial, sans-serif;
 }
 
 .container-2 h6 {
   font-size: 16px;
   margin-bottom: 5px;
-  color: #6c9974;
+  color: #00d4ff;
+  font-family: Arial, sans-serif;
 }
 
 .container-2 input[type="file"] {
@@ -123,11 +113,13 @@
   margin-top: 20px;
 }
 
-.canbtn, .subbtn {
+.canbtn,
+.subbtn {
   padding: 0 20px;
 }
 
-.cancelbtn, .submitbtn {
+.cancelbtn,
+.submitbtn {
   color: #fff;
   font-weight: bold;
   padding: 12px 24px;
@@ -135,111 +127,16 @@
   border-radius: 30px;
   cursor: pointer;
   text-transform: uppercase;
-  margin-left: 0px;
+  font-family: Arial, sans-serif;
 }
 
 .cancelbtn {
   background-color: #ff5f5f;
   margin-right: 10px;
-  margin-left: 275px;
 }
 
 .submitbtn {
   background-color: #38c172;
-  margin-right: 400px;
-}
-
-/* Styling for the horizontal lines */
-.line,
-.line-1,
-.line-2 {
-  height: 1px;
-  background-color: #b1d8c5;
-  margin: 20px 0;
-}
-
-/* Responsive styles */
-@media (max-width: 767px) {
-  .container-1 ion-input,
-  .container-2 ion-input {
-    width: 100%;
-  }
-
-  .lastrow {
-    flex-direction: column;
-  }
-
-  .canbtn,
-  .subbtn {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
-
-/* Additional styling */
-
-/* Styling for form labels */
-.container-1 .custom-label {
-  font-weight: bold;
-  color: #1f6f49;
-  margin-bottom: 5px;
-}
-
-/* Styling for form checkboxes */
-.container-1 .custom-checkbox {
-  display: flex;
-  align-items: center;
-}
-
-.container-1 .custom-checkbox label {
-  font-weight: normal;
-  margin-left: 5px;
-}
-
-.container-1 .custom-checkbox input[type="checkbox"] {
-  margin-right: 5px;
-}
-
-/* Styling for form select inputs */
-.container-1 select {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  color: #1f6f49;
-  background-color: #edf7f0;
-  transition: background-color 0.3s ease;
-}
-
-.container-1 select:focus {
-  background-color: #c8e4d4;
-  outline: none;
-}
-
-.container-2 .choose-file-btn {
-  color: #2cc226;
-  font-weight: bold;
-  padding: 8px 16px;
-  background-color: #38c172;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.container-2 .reset-btn{
-  color: #fff;
-  font-weight: bold;
-  padding: 8px 14px;
-  background-color: #ff5f5f;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-.container-2 .reset-btn:hover{
-background-color: #e91818;
 }
 
 /* Styling for the file input and button */
@@ -256,6 +153,7 @@ background-color: #e91818;
   border-radius: 30px;
   cursor: pointer;
   text-transform: uppercase;
+  font-family: Arial, sans-serif;
 }
 
 /* Additional styling for the file input and button */
@@ -267,3 +165,134 @@ background-color: #e91818;
   background-color: #15513a;
 }
 
+/* Remove small box inside the buttons */
+.cancelbtn,
+.submitbtn,
+.choose-file-btn,
+.reset-btn {
+  display: inline-block;
+  margin-top: 10px;
+  appearance: none;
+}
+
+/* Adjust margins for buttons */
+.cancelbtn {
+  margin-right: 10px;
+}
+
+.submitbtn {
+  margin-left: 10px;
+}
+
+/* Update alignments for buttons */
+.lastrow {
+  flex-wrap: wrap;
+}
+
+.canbtn {
+  order: 1;
+}
+
+.subbtn {
+  order: 2;
+}
+
+/* Additional modifications to suit your gaming style can be made as per your preferences */
+
+
+
+
+/* Styling for the horizontal lines */
+.line,
+.line-1,
+.line-2 {
+  height: 1px;
+  background-color: #39ff14;
+  margin: 20px 0;
+}
+
+/* Additional styling */
+.container-1 .custom-label {
+  font-weight: bold;
+  color: #39ff14;
+  margin-bottom: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.container-1 ion-input[type="text"],
+.container-1 input[type="text"] {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container-1 input[type="date"] {
+  background-image: url("/asssets/icon/R.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 20px;
+  padding-right: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.container-2 .choose-file-btn,
+.container-2 .reset-btn {
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 14px;
+  background-color: #ff5f5f;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+}
+
+.container-2 .reset-btn:hover {
+  background-color: #e91818;
+}
+
+/* Add glow effect to form fields and buttons */
+.container-1 ion-input:focus,
+.container-1 input[type="text"]:focus,
+.container-1 input[type="date"]:focus,
+.container-1 input[type="file"]:focus,
+.cancelbtn:hover,
+.submitbtn:hover,
+.choose-file-btn:hover {
+  box-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
+/* Add glow effect to container */
+.container-1,
+.container-2 {
+  box-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
+}
+
+/* Add animation to buttons */
+.cancelbtn,
+.submitbtn {
+  transition: background-color 0.3s ease;
+}
+
+.cancelbtn:hover{
+  background-color: #be1212;
+}
+
+.submitbtn:hover {
+  background-color: #1f6f49;
+}
+
+/* Add custom font for headers and labels */
+.container-1 h1,
+.container-2 h1,
+.container-1 label,
+.container-2 label {
+  font-family: "Bebas Neue", cursive;
+}
+
+/* Add gaming-related icons or graphics as background images */
+.container-1 {
+  background-image: url("/asssets/mtlogo.jpg");
+  background-size: cover;
+}
+
+/* Additional modifications to suit your gaming style can be made as per your preferences */
