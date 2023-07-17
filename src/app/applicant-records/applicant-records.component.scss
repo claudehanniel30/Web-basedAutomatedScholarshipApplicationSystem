@@ -7,6 +7,16 @@
   background-color: #f2f2f2;
   color: #333;
   font-family: 'Arial', sans-serif;
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 table {
@@ -17,6 +27,19 @@ table {
   background-color: #e1f2e1;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
+  animation: slide-up 2s ease-in-out;
+}
+
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 th {
@@ -38,14 +61,6 @@ tr:last-child td {
 
 tr:nth-child(even) {
   background-color: #d6ecd6;
-}
-
-.total-applicants {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 14px;
-  color: #777;
 }
 
 ion-button {
