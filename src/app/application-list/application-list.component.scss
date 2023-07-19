@@ -1,39 +1,186 @@
 .container-4 {
-    height: 90vh;
-    padding: 10px;
-    width: 100%;
-    overflow: auto;
+  height: 90vh;
+  padding: 10px;
+  width: 100%;
+  overflow: auto;
+  background-color: #f2f2f2;
+  color: #333;
+  font-family: "Arial", sans-serif;
+  animation: fade-in 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
   }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
+  100% {
+    opacity: 1;
   }
-  
-  th,
-  td {
-    padding: 10px;
-    text-align: left;
+}
+
+table {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #e1f2e1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  animation: slide-up 2s ease-in-out;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
   }
-  
-  th {
-    background-color: #f5f5f5;
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
+}
+
+th {
+  padding: 12px;
+  background-color: #8dc78d;
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 1px solid #5f955f;
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:nth-child(even) {
+  background-color: #d6ecd6;
+}
+
+ion-button {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  --border-radius: 5px;
+  --background: #68c168;
+  --color: #fff;
+  --ion-color-primary: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+ion-button:hover {
+  background-color: #4d9e4d;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+ion-button:active {
+  background-color: #3c873c;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+ion-button[color="danger"] {
+  --background: #ffd700;
+  --color: #333;
+}
+
+ion-button[color="danger"]:hover {
+  background-color: #e6bf00;
+}
+
+ion-button[color="danger"]:active {
+  background-color: #b39500;
+}
+
+ion-button[color="success"] {
+  --background: #ffb400;
+}
+
+ion-button[color="success"]:hover {
+  background-color: #e69900;
+}
+
+ion-button[color="success"]:active {
+  background-color: #cc7a00;
+}
+
+/* Additional Styles */
+
+ion-button.rounded {
+  --border-radius: 20px;
+}
+
+ion-button.large {
+  padding: 15px 30px;
+  font-size: 18px;
+}
+
+ion-button.outline {
+  --background: transparent;
+  --color: #68c168;
+  border: 2px solid #68c168;
+}
+
+ion-button.outline:hover {
+  background-color: rgba(104, 193, 104, 0.1);
+}
+
+table th:first-child {
+  border-top-left-radius: 8px;
+}
+
+table th:last-child {
+  border-top-right-radius: 8px;
+}
+
+td:last-child {
+  border-right: none;
+}
+
+tr:hover {
+  background-color: #c6f2c6;
+}
+
+ion-button.outline:disabled {
+  --color: #999;
+  border-color: #999;
+  cursor: not-allowed;
+}
+
+ion-button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+ion-button.large.icon-only {
+  padding: 10px;
+}
+
+ion-button.large.icon-only ion-icon {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .container-4 {
+    height: auto;
   }
-  
-  ion-button {
-    --padding-start: 10px;
-    --padding-end: 10px;
-    --border-radius: 5px;
-    --background: #4285f4;
-    --color: #fff;
-    --ion-color-primary: #fff;
+
+  ion-button.large {
+    padding: 10px 20px;
+    font-size: 16px;
   }
-  
-  ion-button[color="danger"] {
-    --background: #ff5722;
-  }
-  
+}
