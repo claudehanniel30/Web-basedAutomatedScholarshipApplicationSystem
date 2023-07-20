@@ -181,6 +181,9 @@
         <h6>Upload Grades:</h6>
       </ion-col>
       <ion-col size="12" size-sm="7">
+        <form >
+        <input type="text" [(ngModel)]="gradeFileName" readonly name="grades" class="greenish-input"/> 
+
         <label for="grades-file" class="file-button">Select File</label>
         <!-- <input type="text" (change)="getGrade(grade.value)" #grade /> <br /> -->
         <input
@@ -191,6 +194,7 @@
           (change)="getGradeFile($event)"
         />
         <input type="reset" class="reset-btn" value="Delete" />
+        </form>
       </ion-col>
     </ion-row>
 
@@ -199,6 +203,9 @@
         <h6>Upload COR:</h6>
       </ion-col>
       <ion-col size="12" size-sm="7">
+        <form>
+        <input type="text" [(ngModel)]="corFileName" readonly name="cor" class="greenish-input"/>
+
         <label for="cor-file" class="file-button">Select File</label>
         <!-- <input type="text" (change)="getCOR(cor.value)" #cor /> <br /> -->
         <input
@@ -209,6 +216,7 @@
           (change)="getCORFile($event)"
         />
         <input type="reset" class="reset-btn" value="Delete" />
+        </form>
       </ion-col>
     </ion-row>
 
@@ -217,8 +225,9 @@
         <h6>Upload School ID:</h6>
       </ion-col>
       <ion-col size="12" size-sm="7">
+        <form >
+        <input type="text" [(ngModel)]="idFileName" name="id" readonly class="greenish-input"/>
         <label for="school-id-file" class="file-button">Select File</label>
-        <!-- <input type="text" (change)="getID(id.value)" #id /> <br /> -->
         <input
           type="file"
           id="school-id-file"
@@ -227,6 +236,7 @@
           (change)="getIDFile($event)"
         />
         <input type="reset" class="reset-btn" value="Delete" />
+      </form>
       </ion-col>
     </ion-row>
 
@@ -235,6 +245,9 @@
         <h6>Upload Indengency:</h6>
       </ion-col>
       <ion-col size="12" size-sm="7">
+        <form>
+        <input type="text" [(ngModel)]="indigencyFileName" readonly name="indigency" class="greenish-input"/> 
+
         <label for="indengency-file" class="file-button">Select File</label>
         <!-- <input
           type="text"
@@ -249,6 +262,7 @@
           (change)="getIndigencyFile($event)"
         />
         <input type="reset" class="reset-btn" value="Delete" />
+        </form>
       </ion-col>
     </ion-row>
 
