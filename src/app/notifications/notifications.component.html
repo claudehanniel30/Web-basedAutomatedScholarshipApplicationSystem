@@ -1,3 +1,15 @@
-<h1 class="under-construction">
-  Under Construction
-</h1>
+<div class="container">
+  <div class="container-header">
+    <h1>Notifications</h1>
+    <div class="notifications">
+      <ion-card *ngFor="let notification of notifications">
+        <ion-card-header>
+          <ion-card-title>{{ notification.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{ notification.message }}
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</div>

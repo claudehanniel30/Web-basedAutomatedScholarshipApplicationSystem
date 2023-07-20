@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +26,6 @@ export class AppComponent {
           url: '/folder/Applicants Record',
           icon: 'list',
         },
-        { title: 'Logout', url: '/folder/Logout', icon: 'log-out' },
       ];
     } else if (studentID != null) {
       this.appPages = [
@@ -52,15 +51,9 @@ export class AppComponent {
           icon: 'notifications',
         },
         { title: 'Messages', url: '/folder/Messages', icon: 'mail' },
-
-        {
-          title: 'logout',
-          url: '/folder/Logout',
-          icon: 'records',
-        },
       ];
     }
-    this.router.events.subscribe((event) => {
+    this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
         this.handleRouteChange();
       }
@@ -82,7 +75,6 @@ export class AppComponent {
           url: '/folder/Applicant Records',
           icon: 'list',
         },
-        { title: 'Logout', url: '/folder/Logout', icon: 'log-out' },
       ];
     } else if (studentID != null) {
       this.appPages = [
@@ -108,13 +100,12 @@ export class AppComponent {
           icon: 'notifications',
         },
         { title: 'Messages', url: '/folder/Messages', icon: 'mail' },
-
-        {
-          title: 'logout',
-          url: '/folder/Logout',
-          icon: 'records',
-        },
       ];
     }
+  }
+
+  logout() {
+    localStorage.clear();
+    this.router.navigate(['/login']);
   }
 }

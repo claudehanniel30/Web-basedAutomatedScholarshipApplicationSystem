@@ -19,7 +19,7 @@ export class SubmitComponent implements OnInit {
   city: string = '';
   portalzipcode: string = '';
   phonenumber: string = '';
-  email: string = '';
+  school: string = '';
   course: string = '';
   gwa: number = 0;
 
@@ -130,29 +130,33 @@ export class SubmitComponent implements OnInit {
     //generate user id in string format
     const min = 10000; // Minimum value (inclusive)
     const max = 99999; // Maximum value (inclusive)
-    let studentID = Math.floor(Math.random() * (max - min + 1)) + min;
-    let data = {
-      studentID: String(studentID),
-      firstname: this.firstname,
-      middlename: this.middlename,
-      lastname: this.lastname,
-      birthdate: this.birthdate,
-      placeofbirth: this.placeofbirth,
-      streetaddress: this.streetaddress,
-      city: this.city,
-      portalzipcode: this.portalzipcode,
-      phonenumber: this.phonenumber,
-      course: this.course,
-      gwa: this.gwa,
-      email: this.email,
-      grades: '../../assets/docs/' + this.gradeFile,
-      cor: '../../assets/docs/' + this.corFile,
-      schoolid: '../../assets/docs/' + this.idFile,
-      indigency: '../../assets/docs/' + this.indigencyFileName,
 
-      status: 'Pending',
-    };
-    this.database.students.push(data);
+    let studentID = localStorage.getItem('studentID');
+    for (let i = 0; i < this.database.students.length; i++) {
+      if (this.database.students[i].studentID === studentID) {
+        this.database.students[i].firstname = this.firstname;
+        this.database.students[i].middlename = this.middlename;
+        this.database.students[i].lastname = this.lastname;
+        this.database.students[i].birthdate = this.birthdate;
+        this.database.students[i].placeofbirth = this.placeofbirth;
+        this.database.students[i].streetaddress = this.streetaddress;
+        this.database.students[i].city = this.city;
+        this.database.students[i].portalzipcode = this.portalzipcode;
+        this.database.students[i].phonenumber = this.phonenumber;
+        this.database.students[i].course = this.course;
+        this.database.students[i].gwa = this.gwa;
+        this.database.students[i].shcool = this.school;
+        this.database.students[i].grades =
+          '../../assets/backend/uploads/' + this.gradeFileName;
+        this.database.students[i].cor =
+          '../../assets/backend/uploads/' + this.corFileName;
+        this.database.students[i].schoolid =
+          '../../assets/backend/uploads/' + this.idFileName;
+        this.database.students[i].indigency =
+          '../../assets/backend/uploads/' + this.indigencyFileName;
+        this.database.students[i].status = 'pending';
+      }
+    }
     console.log(this.database.students);
 
     const alert = await this.alertController.create({

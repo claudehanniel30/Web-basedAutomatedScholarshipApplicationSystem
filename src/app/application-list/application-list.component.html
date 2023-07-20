@@ -13,21 +13,19 @@
           <th>Phone Number</th>
           <th>Email</th>
           <th>GWA</th>
-          <th colspan="3">Action</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td> 
-        <td></td>
-        <td></td> 
-        <td><ion-button color="danger">DELETE</ion-button></td>
+        <tr *ngFor="let student of scholars">
+          <td>{{ student.firstname }} {{ student.lastname }}</td>
+          <td>{{ student.birthdate }}</td>
+          <td>{{ student.placeofbirth }}</td>
+          <td>{{ student.streetaddress }}</td>
+          <td>{{ student.city }}</td>
+          <td>{{ student.portalzipcode }}</td>
+          <td>{{ student.phonenumber }}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ student.gwa }}</td>
         </tr>
       </tbody>
     </table>

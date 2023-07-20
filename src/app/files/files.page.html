@@ -1,0 +1,73 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>files</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-accordion-group>
+    <!-- Grades Accordion Item -->
+    <ion-accordion value="grades">
+      <ion-item slot="header" color="light">
+        <ion-label>Grades PDF</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <iframe
+          [src]="getSafeUrl(student.grades)"
+          type="application/pdf"
+          width="100%"
+          height="500px"
+        ></iframe>
+      </div>
+    </ion-accordion>
+
+    <!-- COR Accordion Item -->
+    <ion-accordion value="cor">
+      <ion-item slot="header" color="light">
+        <ion-label>Certificate of Registration PDF</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <iframe
+          [src]="getSafeUrl(student.cor)"
+          type="application/pdf"
+          width="100%"
+          height="500px"
+        ></iframe>
+      </div>
+    </ion-accordion>
+
+    <!-- School ID Accordion Item -->
+    <ion-accordion value="schoolid">
+      <ion-item slot="header" color="light">
+        <ion-label>School ID PDF</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <iframe
+          [src]="getSafeUrl(student.schoolid)"
+          type="application/pdf"
+          width="100%"
+          height="500px"
+        ></iframe>
+        />
+      </div>
+    </ion-accordion>
+
+    <!-- Indigency Accordion Item -->
+    <ion-accordion value="indigency">
+      <ion-item slot="header" color="light">
+        <ion-label>Indigency PDF</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        <iframe
+          [src]="getSafeUrl(student.indigency)"
+          type="application/pdf"
+          width="100%"
+          height="500px"
+        ></iframe>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>

@@ -27,9 +27,25 @@
           <td>{{ student.phonenumber }}</td>
           <td>{{ student.email }}</td>
           <td>{{ student.gwa }}</td>
-          <td><ion-button>ASSESS</ion-button></td>
-          <td><ion-button color="danger">REJECT</ion-button></td>
-          <td><ion-button color="success">APPROVE</ion-button></td>
+          <td>
+            <ion-button (click)="viewStudent(student.studentID)"
+              >ASSESS</ion-button
+            >
+          </td>
+          <td>
+            <ion-button
+              color="success"
+              (click)="approveStudent(student.studentID)"
+              >APPROVE</ion-button
+            >
+          </td>
+          <td>
+            <ion-button
+              color="danger"
+              (click)="rejectStudent(student.studentID)"
+              >REJECT</ion-button
+            >
+          </td>
         </tr>
       </tbody>
     </table>
