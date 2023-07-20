@@ -18,12 +18,12 @@ The primary objective of this project is to create a mechanism for awarding scho
 The scholarship application process or system is designed to simplify the process of assessing students' academic performance for scholarship applications. It takes all the requirements needed for the application including grades, indigency, and certificate of enrollment.
 Key features of the system include:
 
--User-friendly Interface: The application and selection processes are made simple to navigate by the system's intuitive and user-friendly interface, which is provided for both students and administrators.
--Student Registration: Students can register on the platform by entering their names, contact information, and pertinent academic history.
--Submission of Applications: Students who have registered may submit their scholarship applications by completing an extensive form that asks for their academic background, contact information, and other necessary information.
--Administrator's Panel: The administrators get access to a special admin panel where they can effectively review and handle the submitted applications.
--Candidate selection: Administrators can choose the worthiest applicants for the available scholarships using the system's assessment results.
--Notification system: Students are automatically informed about the progress of their applications, including the submission's confirmation and the selection process's final outcomes.
+- User-friendly Interface: The application and selection processes are made simple to navigate by the system's intuitive and user-friendly interface, which is provided for both students and administrators.
+- Student Registration: Students can register on the platform by entering their names, contact information, and pertinent academic history.
+- Submission of Applications: Students who have registered may submit their scholarship applications by completing an extensive form that asks for their academic background, contact information, and other necessary information.
+- Administrator's Panel: The administrators get access to a special admin panel where they can effectively review and handle the submitted applications.
+- Candidate selection: Administrators can choose the worthiest applicants for the available scholarships using the system's assessment results.
+- Notification system: Students are automatically informed about the progress of their applications, including the submission's confirmation and the selection process's final outcomes.
 ## Installation
 
 To set up the scholarship application system, follow these steps:
