@@ -37,8 +37,9 @@ git clone https://github.com/claudehanniel30/Web-basedAutomatedScholarshipApplic
 2. Install the required dependencies. This may include specific programming languages, libraries, or frameworks required for the system.
 
 ```
-# Example command for installing dependencies using Python's pip package manager
-pip install -r requirements.txt
+To install the required dependencies for an Ionic project, you can use npm (Node Package Manager) instead of pip, as Ionic projects are typically built using Node.js and Angular/React/Vue.js.
+
+npm install
 ```
 
 3. Configure any necessary settings or environment variables. This might include specifying the scholarship criteria, input file formats, or specific calculations for GWA or CGPA.
