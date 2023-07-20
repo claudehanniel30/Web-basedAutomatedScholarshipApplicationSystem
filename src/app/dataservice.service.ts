@@ -190,7 +190,7 @@ export class DataserviceService {
       schoolid: '',
       indigency: '',
       status: '',
-    },
+    }
   ];
 
   constructor() {}
