@@ -31,7 +31,7 @@ To set up the scholarship application system, follow these steps:
 1. Clone the repository to your local machine:
 
 ```
-git clone https://github.com/YourUsername/YourRepo.git
+git clone https://github.com/claudehanniel30/Web-basedAutomatedScholarshipApplicationSystem.git
 ```
 
 2. Install the required dependencies. This may include specific programming languages, libraries, or frameworks required for the system.
